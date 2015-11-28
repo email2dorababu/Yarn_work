@@ -95,3 +95,13 @@ operable program or batch file.
 Now for Java_home set the Jdk path...
 JAVA_HOME -> C:\Program Files\Java\jdk1.8.0_45
 I have set in user variables and closed all command prompts and opened and checked in new command window.
+
+C:\Users\do919279>echo %JAVA_HOME%
+C:\Program Files\Java\jdk1.8.0_45
+
+so in our hadoop-env.sh
+export JAVA_HOME=${JAVA_HOME}   or 
+export JAVA_HOME=C:\PROGRA~1\Java\jdk1.8.0_45
+
+now checking with the first approach.
+
