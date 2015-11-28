@@ -1,6 +1,6 @@
 http://toodey.com/2015/08/10/hadoop-installation-on-windows-without-cygwin-in-10-mints/
 
-downloaded Hadoop 2.7.1 and JDK installed
+STEP 1::::::::::::::::::::::::::::::::::::::::::downloaded Hadoop 2.7.1 and JDK installed
 
 C:\>java -version
 java version "1.8.0_65"
@@ -37,4 +37,61 @@ stem32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Users\do919279\Downlo
 ads\HadoopYarnDistributions\hadoop-2.7.1\bin;     C:\Users\do919279\AppData\Local\Con
 tinuum\Anaconda2;C:\Users\do919279\AppData\Local\Continuum\Anaconda2\Scripts;C:\
 Users\do919279\AppData\Local\Continuum\Anaconda2\Library\bin
+-----------------------------------------------------------------------------------------------------------------------------
+STEP 2::::::::::::::::::::::::::::::::::::::::::Set Hadoop_home
+NOTE:in the above URL it is mentioned to include the bin.. 
+but for all XXXX_HOME variables, we should not include the bin folders.
+for path variable, we should always include BIN folders.
+E.G:
+HADOOP_HOME : C:\Users\do919279\Downloads\HadoopYarnDistributions\hadoop-2.7.1\
+PATH: C:\Users\do919279\Downloads\HadoopYarnDistributions\hadoop-2.7.1\bin
 
+STEP 3:::::::::::::::::::::::::::::::::::::::::Hadoop Configuration
+all configuration files lies in etc/hadoop folder 
+COre-site.xml - fs.defaultFS -> hdfs://localhost:9000
+mapred-site.xml - mapreduce.framework.name -> yarn
+hdfs-site.xml - dfs.replication ->1  and 
+dfs.namenode.name.dir -> hadoop_home\data\namenode
+dfs.datanode.data.dir -> hadoop_home\data\datanode
+
+yarn-site.xml - yarn.nodemanager.aux-services ->mapreduce_shuffle
+yarn.nodemanager.aux_services.mapreduce.shuffle.class -> org.apache.hadoop.mapred.shuffleHandler
+note: why mapred.shuffle??? why not mapreduce.shuffle????
+
+Hadop-evn.sh -> include the java_home.
+MOST IMP NOTE is -> hadoop cannot handle spaces in folder names in windows so give the 6 letternotation for 
+program files. PROGRA~1
+
+------------------------------
+i have the below folders in pgmfiles/java
+ <DIR>          jdk1.8.0_45
+ <DIR>          jre1.8.0_60
+ <DIR>          jre1.8.0_65
+ so when i go to jdk/bin and check for version of javac and java.. they are 0_45
+ and when i go out from this folder and check , javac didnt get recognized and java version is 0_65
+ 
+C:\Program Files\Java\jdk1.8.0_45\bin>javac -version
+javac 1.8.0_45
+
+C:\Program Files\Java\jdk1.8.0_45\bin>java -version
+java version "1.8.0_45"
+Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
+
+C:\Program Files\Java\jdk1.8.0_45\bin>cd..
+--- came out of jdk/bin directory.
+C:\Program Files\Java>java -version
+java version "1.8.0_65"
+Java(TM) SE Runtime Environment (build 1.8.0_65-b17)
+Java HotSpot(TM) 64-Bit Server VM (build 25.65-b01, mixed mode)
+
+C:\Program Files\Java>javac -version
+'javac' is not recognized as an internal or external command,
+operable program or batch file.
+
+
+-----------------------------
+
+Now for Java_home set the Jdk path...
+JAVA_HOME -> C:\Program Files\Java\jdk1.8.0_45
+I have set in user variables and closed all command prompts and opened and checked in new command window.
