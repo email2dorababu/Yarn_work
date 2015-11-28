@@ -104,4 +104,8 @@ export JAVA_HOME=${JAVA_HOME}   or
 export JAVA_HOME=C:\PROGRA~1\Java\jdk1.8.0_45
 
 now checking with the first approach.
+--------------------------------------------------------------------------------
+STEP 4:::::::::::::::::::::::::::::::::::::::::Place the windows DLLs and EXEs.
+from https://github.com/sardetushar/hadooponwindows/archive/master.zip
 
+Replace the entire BIN folder from the above extracted folder.
