@@ -1,1 +1,40 @@
 http://toodey.com/2015/08/10/hadoop-installation-on-windows-without-cygwin-in-10-mints/
+
+downloaded Hadoop 2.7.1 and JDK installed
+
+C:\>java -version
+java version "1.8.0_65"
+Java(TM) SE Runtime Environment (build 1.8.0_65-b17)
+Java HotSpot(TM) 64-Bit Server VM (build 25.65-b01, mixed mode)
+----------------------------
+Difference between user and system variables in windows:
+System variables are shared for all users, 
+but user variables are only for your account/profile.
+
+Environment variables are 'evaluated' (ie. they are attributed) in the following order:
+System variables ->Variables defined in autoexec.bat->User variables
+Environment variables specify search paths for files, directories for temporary files, application-specific options, 
+and other similar information.
+
+My settings are :
+user variables:
+PATH(capital) - C:\Users\do919279\AppData\Local\Continuum\Anaconda2;
+C:\Users\do919279\AppData\Local\Continuum\Anaconda2\Scripts;
+C:\Users\do919279\AppData\Local\Continuum\Anaconda2\Library\bin
+
+HADOOP_HOME : C:\Users\do919279\Downloads\HadoopYarnDistributions\hadoop-2.7.1
+------------
+System variables:
+Path - (Caps P and all small)
+C:\ProgramData\Oracle\Java\javapath;
+%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;
+C:\Users\do919279\Downloads\HadoopYarnDistributions\hadoop-2.7.1\bin;
+---------------------------------
+echo %path%
+C:\>echo %path% - here it is showing System + then user variables concatinated.
+C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\Sy
+stem32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Users\do919279\Downlo
+ads\HadoopYarnDistributions\hadoop-2.7.1\bin;     C:\Users\do919279\AppData\Local\Con
+tinuum\Anaconda2;C:\Users\do919279\AppData\Local\Continuum\Anaconda2\Scripts;C:\
+Users\do919279\AppData\Local\Continuum\Anaconda2\Library\bin
+
