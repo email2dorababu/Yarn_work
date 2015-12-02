@@ -4,3 +4,12 @@ Anindita's Blog
 
 Step 1: sudo apt-get update
 step 2: sudo apt-get install default-jdk
+check java -version
+step 3: sudo apt-get install ssh
+step 4: sudo apt-get install rsync
+step 5: ssh-keygen -t dsa -p '' -f ~/.ssh/id_dsa
+step 6: cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
+clear - we have now down with the configurations
+
+Checking pwd less configuration.
+ssh local
