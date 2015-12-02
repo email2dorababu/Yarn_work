@@ -11,4 +11,8 @@ Active user account(s) (username/password): ubuntu/reverse
 The Amazon Linux AMI is a supported and maintained Linux image provided by Amazon Web Services for use on 
 Amazon Elastic Compute Cloud (Amazon EC2).
 ----------------------------
+sudo apt-get install openssh-server openssh-client
 
+To Share the folders, between the Host and Guest, create a shared folder.
+Devices -> shared folder, make it bi directional.
+Now you can share the files and enjoy.
