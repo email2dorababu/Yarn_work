@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=TIkm0x_s8bM
+Installation of Apache Hadoop 2.6.0 as Single node on Ubuntu 14.10 (unicorn) Pseudo-distributed mode
+Anindita's Blog
+
+Step 1: sudo apt-get update
+step 2: sudo apt-get install default-jdk
