@@ -13,3 +13,12 @@ clear - we have now down with the configurations
 
 Checking pwd less configuration.
 ssh local
+
+sudo tar -xvf hadoop-2.6.0
+sudo mv hadoop-2.6.0 /usr/local/hadoop   # here we are moving to local directory.
+check def path of jdk by,
+update-alternatives --config java
+usr/lib/javaxx/
+
+sudo vim .bashrc to set env setting
+sudo apt-get vim install
