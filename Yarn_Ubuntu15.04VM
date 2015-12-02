@@ -6,3 +6,9 @@ starting with 3 gb ram and hard disk space 40 gb, dynamically allocate.
 When switched on, asked for the pwd. cound the pwd in the below website.
 http://virtualboxes.org/images/ubuntu/
 Active user account(s) (username/password): ubuntu/reverse
+
+-----------------------------
+The Amazon Linux AMI is a supported and maintained Linux image provided by Amazon Web Services for use on 
+Amazon Elastic Compute Cloud (Amazon EC2).
+----------------------------
+
