@@ -164,6 +164,49 @@ now let configure the following xml files
 core-site, hdfs-site, yarn-site , mapred-site xmls
 
 they are in etc/hadoop/ directory..
+-------------------------------------------
+
+core-site
+fs.default.name
+hdfs://localhost:9000
+
+hdfs-site.xml
+dfs.replication  1
+dfs.namenode.name.dir
+file:/usr/local/hadoop_tmp/hdfs/namenode
+dfs.datanode.data.dir
+file:/usr/local/hadoop_tmp/hdfs/datanode
+
+
+yarn-site
+
+yarn.nodemanager.aux-services   
+mapreduce_shuffle
+yarn.nodemanager.aux-services.mapreduce.shuffle.class
+org.apache.hadoop.mapred.shuffleHandler
+
+lets copy the mapred.xml template and then edit it
+
+mapred-site.xml
+mapreduce.framework.name
+yarn
+now let create folder where hadoop will process the hdfs jobs
+
+sudo mkdir -p /user/local/hadoop_tmp
+in that tmp folder create hdfs/namenode  , hdfs/datanode, 
+
+assign hduser the ownership of above folders
+sudo chown -R hduser /usr/local/hadoop_tmp
+
+hdfs namenode -format
+start-dfs.sh
+start-yarn.sh
+JPS
+nodemanager
+resourcemanger
+data,name,secondary name node
+
+
 
 
 
