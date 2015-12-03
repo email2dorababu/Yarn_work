@@ -1,0 +1,170 @@
+The tool used to record the session is BB flashbackpro 4 Recorder
+https://www.youtube.com/watch?v=SWYQO919Ozk
+how to install hadoop 2 7 1 multinode cluster
+  
+HadoopWorld
+Sudo nano /etc/hosts
+The file contains already contains the line  127.0.0.1 master
+Next to it enter the below lines
+192.168.2.116 master   #namenode#
+192.168.2.117 node1   
+192.168.2.118 node2   
+192.168.2.119 node3
+
+Save and exit
+------|
+
+Sudo nano /usr/local/hadoop/etc/hadoop/core-site.xml
+Change the fs.default.name property to 
+Hdfs://master:9000
+Hdfs-site.xml
+Dfs.replication 3
+Remove the DATANODE.data.dir property
+Leave the namenode directory as it is.
+Yarn-site.xml
+Remove all the properties
+And the below script.
+Last property – yarn.resourcemanager.address  value master:8050
+Last before – yarn.resourcemanager.scheduler.address – master:8035
+First one – yarn.resourcemanager.resource-tracker.address – master:8025
+Save and exit
+Mapred-site.xml
+Remove all add
+Mapreduce.job.tracker – master 5411
+Mapred.framework.name – yarn
+
+------|
+Now slaves file.. 
+Etc/hadoop/slaves file:
+Master
+Node1
+Node2
+Node3
+------|
+Sudo nano /etc/hostname  in this file
+Master 
+----|
+Let shutdown masternamenode and clone it..
+(auto eathernet should not be checked in network options??)
+Now go to the virtual box -> right click on the vm entry, clone 
+And rename each one as node1,clone ->node2,clone node3
+
+When click on ok after rename, it asks for Full clone or linked clone?? Select linked clone -> next -> done
+Switch on all machines
+
+Now go to master machine and terminal
+Terminal -> if config the inetaddress will be 192.168.2.116 copy
+Network arrows button on the top right corner-> edit network connections
+In the dialog box click on master under eathernet. Edit -> ipv4 settings tab, method -> manual
+In the addresses section of the same window -> add
+Under address it si 192.168.2.116, net mask 24
+Ok close
+-------| 
+On the same machine -> su hduser
+Sudo nano /usr/local/hadoop/masters
+Just type master in that file
+Now s=in the slaves file it will be 
+Master
+Node1
+Node2
+Node3
+--------|
+Now we have hadoop_tmp in (we created ) in usr/local/ folder in the single node creation step.
+Sudo rm –r /usr/local/hadoop_tmp
+Now create it again
+Create hadoop_tmp/hdfs/namenode
+Sudo chown –R hduser /usr/local/hadoop_tmp
+
+Now login to node 1.
+Cmd prompt
+Sudo nano /etc/hostname
+Remove the master, put node1
+And set the internet settings ipv4 tab it is 192.168.2.117 and the netmask is 24
+Now go to the directory,
+Sudo /etc/init.d/networking restart
+Ifconfig
+We can see its ip address is still 116
+It seems it is ok.
+---------|
+Clear
+Sudo  nano /usr/local/hadoop/etc/hadoop/hdfs-stie.xml
+Remove the property, dfs.namenode.name.dir property
+Dfs.datanode.data.dir  value is file:/usr/local/hadoop_tmp/hdfs/datanode
+
+Now lets reboot the system node1. 
+Lets do the same for node 2.
+Edit connections, ipv4 as  manual, address  2.118
+Sudo nano /etc/hostname  remove master and type node2
+Now in etc/hosts the all 4 addresses should be present
+Sudo nano /etc/local/hadoop/etc/hadoop/slaves
+Put 
+master
+Node1   
+Node2
+Node 3
+---->|
+Go to hdfs-site.xml, remove namenode.name.dir to datanode.dir. set value accordingly
+Lly, node 3 etc/hostname
+Slaves put all 4 should be there
+Hdfs-site dfs.datanode.data.dir -> file://.... /data
+Edit connections ipv4-> manual , address is 119 ok.
+Restart. Now we have done the setup..
+-------->|
+After rebooting the IP address will be changed!!
+Now let see if we can ssh from one node to another 
+From master -> ssh 192.168.2.117
+Once we do this, the prompt changes from
+hduser@master> to hduser@node1>
+if this happpnes , it is working fine and we have loffed from master to node1
+exit
+lly login to ssh 118,ssh119 
+same for all nodes now. 
+Exit
+Now we go to node1 system.
+And do  ssh master .. this don’t work
+So do node1> ssh 192.168.2.116
+The prmt chages to master
+Similary ly check from node 2
+Ssh 116, prompt chages to master
+Similaryly check in node1 i.e all
+
+---------|
+
+
+
+
+Now in the node 1 machine
+Go to /etc/hosts
+Here we see that master node mentioned as 127.0.0.1 also.
+Now we do name node format
+From master machine 
+Hdfs namenode –format
+Start the name node
+Start-dfs.sh
+We can see that in all other systems also the .out files datanodes starting
+Start-yarn.sh
+We can see in the masternode all the processes including datanode
+Now run jps in slave machines, you can see, nodemanager and datanode these tow processes.
+Everyting looks good.
+Open firefox..
+http://master:50070/
+----------------------------------------------------------|
+But The  GUI wouldn’t show the data node through the web interface. So we changed to local host in each node, the loopback server name from master to local host.
+Sudo nano/etc/hosts
+127.0.0.1 localhost
+We can remove master ..
+Sudo nano /usr/hadoop/etc/hadoop/slaves
+Remove the master entry from the slave files.
+We need to restart everting for the chage to reflext..
+We will restart the NN and hadoop this we don’t see datanode in the master serer.
+Hwere we can see just 3 datanodes. And one master
+And we can see master as a decommissioned one
+
+
+
+
+
+
+
+
+
