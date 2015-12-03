@@ -19,6 +19,70 @@ sudo mv hadoop-2.6.0 /usr/local/hadoop   # here we are moving to local directory
 check def path of jdk by,
 update-alternatives --config java
 usr/lib/javaxx/
+copy this path and save it in notepad.
 
-sudo vim .bashrc to set env setting
-sudo apt-get vim install
+sudo vim .bashrc    #to set env setting
+sudo apt-get install vim
+
+sudo vim .bashrc
+
+insert mode press I.
+write the belo lines.
+#Hadoop variables
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
+export HADOOP_HOME=/usr/local/hadoop
+export PATH=$PATH:HADOOP_HOME/bin
+export PATH=$PATH:HADOOP_HOME/sbin
+HADOOP_MAPRED_HOME=$HADOOP_HOME
+HADOOP_COMMON_HOME=$HADOOP_HOME
+HDADOOP_HDFS_HOOME=$HADOOP_HOME
+YARN_HOME =$HADOOP_HOME
+HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
+
+shift :wq
+then in the prompt to apply the settings
+source  ~/.bashrc
+
+goto hadoop folder
+cd /usr/loal/hadoop
+
+bin - standard service ,containers for hadoop hdfs, mapreduce,
+etc - standard services needed , etc/hadoop bunch of xml that need to be configured.
+include
+lib
+libexec
+sbin - consists, services, all standeard shell scripts -stopping, balancer, distribute executions etc..
+share
+
+-----------------------------------
+etc/hadoop 
+first file that need to be changed is mapred-site.xml
+mapred-site.xml.template is only will be there.
+here we can directly work with the template.. but in older versions we need to go back and do some backup ..
+
+write some standard configuration withing in xml.
+
+property -name - mapreduce.framework.name , value yarn
+move out from the folder.
+
+open yarn-site.xml
+property-name - yarn.nodemanager.aux-services value- mapreduce_shuffle
+remember from 2.0 onwards, we need to write "_shuffle" , previous versions, we just need to wirte mapreduce.
+for yarn services the value it is mapreduce_shuffle, to introduce shuffleing.
+
+Now 
+core-site.xml  - here we need to specifiy the name for hdfs , and we need to specifically define the name and port.
+for single node it is local host and port is 9000
+
+fs.default.name   hdfs://localhost:9000
+
+----------------------
+now hdfs-site.xml
+couple of configurations..
+property name - dfs.replication  value - 1
+dfs.namenode.dir  - default location for namenode is file:///home/trainer/hadoopspace/hdfs/namenode
+here we are going to save name node and data node directory.
+dfs.data.dir - file:///home/trainer/hadoopspace/hdfs/namenode/datanode
+
+
