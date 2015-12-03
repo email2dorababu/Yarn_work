@@ -92,3 +92,12 @@ Next we need to create directory for namenode and datanode, so we need to create
 mkdir -p /home/trainer/hadoopspace/hdfs/namenode
 mkdir -p /home/trainer/hadoopspace/hdfs/namenode
 
+sudo chown trainer:trainer -R /user/local/hadoop
+the permission has been given to the current directory.
+
+now format the namenode
+hdfs namenode -format
+to start the services
+start-dfs.sh namenode secondary name node and data node.
+start-yarn.sh  starts the yarn daemons nodemanager and resource manager.
+run jps to see what are all the services are running.
