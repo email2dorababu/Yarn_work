@@ -85,4 +85,10 @@ dfs.namenode.dir  - default location for namenode is file:///home/trainer/hadoop
 here we are going to save name node and data node directory.
 dfs.data.dir - file:///home/trainer/hadoopspace/hdfs/namenode/datanode
 
+next is environment settings file.
+we need to specify the java home directory.
+
+Next we need to create directory for namenode and datanode, so we need to create them.. the same path in hdfs-site.xml
+mkdir -p /home/trainer/hadoopspace/hdfs/namenode
+mkdir -p /home/trainer/hadoopspace/hdfs/namenode
 
