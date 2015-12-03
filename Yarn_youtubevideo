@@ -101,3 +101,73 @@ to start the services
 start-dfs.sh namenode secondary name node and data node.
 start-yarn.sh  starts the yarn daemons nodemanager and resource manager.
 run jps to see what are all the services are running.
+
+check the version
+hadoop version
+you can check the webconsole
+
+firefox http://localhost:50070
+------------------------------------------------------------
+
+https://www.youtube.com/watch?v=YY8QL25KCOg&spfreload=1
+
+sudo apt-get install update
+sudo apt-get install default-jdk
+create a dedicated hadoop group and user
+sudo addgroup hadoop
+sudo adduser --ingroup hadoop hduser
+lest add hduser as a sudoer or admin
+sudo adduser hduser sudo
+now lests install open ssh server
+sudo apt-get install openssh-server openssh-client
+now lets login with hduser and generate a key for hd user and add the key to the authorization keys
+su hduser
+cd
+ssh-keyget -t rsa -P ""
+
+cat $HOME/.ssh/id_rsa.pub>> $HOME/.ssh/autorixed_keys
+let try by login to local host 
+ssh localhost
+if you see this message its all good
+exit
+clear
+now let install hadoop 
+follow the commands , or downlooad frpm apache
+wget http://mirrors......../hadoop2.7.tar
+
+tar xvzf 
+now let move hadoop 2.7 to a directory of our choice in this tutorial we will choose /user/local/hadoop/
+sudo mv hadoop-2.7  /usr/local/hadoop/
+
+let give the directory to hduser as the owner
+sudo chown -R hduser /usr/local
+now let edit the bashrc file and append to the end of the file the path to hadoop
+
+sudo nano ~/.bashrc
+
+go to end
+export Java_home
+Hadoop_home
+path =path+hadoop home bin
+path = path/hadoophome/sbin
+hadoop_mapred_home=hadoop hoem
+hadoop common home= hadoop home
+hadoop hdfs home = hadoop home
+yarn home = hadoop home
+hadoop common lib native dir = hadoop home /lib/native
+hadoop opts="-Djava.library.path=$Hadoop_home/lib"
+sorce ~/.bashrc
+now let give the java path to run hadoop 
+sudo nano /usr/local/hadoo/etc/hadoop/hadoop-env.sh
+
+now let configure the following xml files
+core-site, hdfs-site, yarn-site , mapred-site xmls
+
+they are in etc/hadoop/ directory..
+
+
+
+
+
+
+
