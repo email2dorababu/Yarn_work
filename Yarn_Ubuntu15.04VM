@@ -37,3 +37,4 @@ to switch to another supported major release by
 sudo dpkg-reconfigure mysql-apt-config
 sudo apt-get update
 install the server.
+-------------------------------
