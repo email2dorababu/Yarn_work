@@ -12,7 +12,28 @@ The Amazon Linux AMI is a supported and maintained Linux image provided by Amazo
 Amazon Elastic Compute Cloud (Amazon EC2).
 ----------------------------
 sudo apt-get install openssh-server openssh-client
-
+le?
 To Share the folders, between the Host and Guest, create a shared folder.
 Devices -> shared folder, make it bi directional.
 Now you can share the files and enjoy.
+
+date: 7/Dec/2015
+Q1)what is the ssh version available?
+open ssh is freely available version of SECURE SHELL (SSH) protocol family of tools for
+remotely controlling or transferring files between computers.
+
+> ssh -V   capital V
+
+Q2) know what is the mysql version supported??
+sudo apt-get update
+sudo apt-get install mysql-server
+----
+to get server status, stop server and REstart server:
+sudo service mysql status
+sudo service mysql stop
+sudo service mysql start
+----
+to switch to another supported major release by
+sudo dpkg-reconfigure mysql-apt-config
+sudo apt-get update
+install the server.
