@@ -63,7 +63,9 @@ sudo service mysql status
 
 ----------------------------------
 
-
+To clear history in ubuntu - the history is stored in ~/.bash_history
+use the command  history -c && history -w 
+cat /dev/null > ~/.bash_history && history -c && exit
 
 
 
