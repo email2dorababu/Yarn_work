@@ -42,6 +42,12 @@ install the server.
 Good website on apt-get,apt-cache, dpkg.
 http://www.cyberciti.biz/tips/linux-debian-package-management-cheat-sheet.html
 
+Add PPA repository:
+sudo add-apt-repository ppa:<ppa_name>
+for mysql 
+sudo  apt-add-repository ppa:ondrej/mysql-5.6
+sudo apt-get update
+the above lines are not working. so installed using software center.
 
 
 
