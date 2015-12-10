@@ -48,6 +48,20 @@ for mysql
 sudo  apt-add-repository ppa:ondrej/mysql-5.6
 sudo apt-get update
 the above lines are not working. so installed using software center.
+---------------------------------
+after installation - of mysql server 
+ps -A | grep mysql
+mysqld is running
+
+apt-cache search mysql-server
+apt-cache search mysql-client
+
+from above commands we get the list of packages available in the apt repositories.
+
+use the below command for status
+sudo service mysql status
+
+----------------------------------
 
 
 
