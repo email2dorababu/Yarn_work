@@ -1,1 +1,20 @@
-asdfa
+Date Dec 24 2015
+Opened the eclipse-jee-mars-R-win32-x86_64
+Help->Install New software->
+Click on Add button.
+Name -> Egit
+Url -> http://download.eclipse.org/egit/updates
+[in eclipse website it is https://www.eclipse.org/egit/download/]
+select all -> Next
+It will install some libraries 
+once Completed, click yes and restart.
+
+------------------------
+But error came for this!!!!
+cannot install from the https://www.eclipse.org/egit/download/
+so searched in stack overflow
+http://stackoverflow.com/questions/14452724/unable-to-install-egit-plugin-on-eclipe-helios
+
+install older versions of GIT.
+http://download.eclipse.org/egit/updates-2.1
+Restart it and Now all is set.
