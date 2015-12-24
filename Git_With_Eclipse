@@ -18,3 +18,60 @@ http://stackoverflow.com/questions/14452724/unable-to-install-egit-plugin-on-ecl
 install older versions of GIT.
 http://download.eclipse.org/egit/updates-2.1
 Restart it and Now all is set.
+-----------------------------------------------------------|
+Now Eclipse->WIndow->ShowView->Other
+You will see 'GIT' section in the show view , expand it -> select Git Repositories
+
+Now you can select 'Import' option in project explorer or file ->Import
+
+Expand the 'Git' Folder -> Projects from Git.->Next
+You will see local or URI.
+
+The URI of git is not the one you see in the Webbrowser address bar.
+It is the one that appears in the HTTPS clone URL section.
+here i have selected - https://github.com/email2dorababu/HAD-EXAMPLES.git
+
+Automatically fills the details-> click next.
+User login details are not required since it is a public repository.
+
+Click next-> it will show 'master' branch. select ->next
+Setup the directories for that.
+Next-> you will get the below options.
+
+Import existing projects
+use the new project wizard
+Import as general project.
+
+-> since we do not have a project file,
+select the last option, import as general file.
+
+that's it.. the project is imported.
+but it will show error when you try to debug a java program 
+it will show popup -> the selection cannot be launced.. this  is because the project is not a java project.
+it is a general project. we need to tell eclipse to run it.
+
+------------------------------|
+
+on a separate tab, next to Console, you can see a tab "Git Repositories"
+here you can see "remotes"->Origin-> if you right click you can see fetch push etc..
+-----------------------------------------------|
+
+Now how will set this as a java project in eclipse??
+You "DELETE" the project, make sure that UNCHECK the "delete project contents on the disk" option.
+also notedown the location. -> OK.
+
+Now ---- File -> New-> Java project-> FOlder locaiton paste in the Locaiton and type a project name.
+finish. 
+
+Now you can open a java file and you can debug etc..
+Note that -> it is not conected to GIT now.
+
+TO make it connect, right click on the project name -> Team -> Share Project ->Git->next-> 
+it automatically detects as git, because we have imported from git.. .git file will be there.
+
+now you can fetch.. everything will be uptodate.
+
+
+
+
+
