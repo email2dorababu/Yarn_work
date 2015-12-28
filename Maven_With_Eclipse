@@ -1,1 +1,14 @@
-abc
+date 28-12-2015
+Go to Eclipse market place -> search for Maven -> Maven Integration for mars/juno/kepler -> install , restart eclipse.
+
+Now instead of regular project create maven project.
+New ->Other->Maven Project-> Next -> next page is where we need to select the ARCHEType.it is an imp step.
+it is what kind of project you want to build?. maven will automatically generate all xmls, folders, classess that you need for project
+you are developing. it will donwload all the resources you required.
+
+I have selected the first one(since i don't know what to do)
+Next screen , 
+Group ID - it is always your package name. org.bigdatatech
+Artifact ID - is project folder name, here "HelloWorld"
+Version-> we skip here
+Package -> usually we stay with the default package. org.bigdatatech, (instead of org.bigdatatech.HelloWorld)
