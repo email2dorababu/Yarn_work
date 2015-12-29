@@ -42,6 +42,6 @@ now test this on command prompt by
 
 > mvn -version
 
-
+In Linux servers, the variables need to be placed in .bash_profile , and source .bash_profile
 
 
