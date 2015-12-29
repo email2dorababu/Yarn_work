@@ -25,3 +25,23 @@ Description : Maven Catalog
 -------------------
 Now when i try to create a Maven project, it took a while to download all the artifacts,
 now selected "maven-archetype-quickstart"
+--------------------------------------------------------
+Date 29/12/15
+http://download.eclipse.org/technology/m2e/releases/1.0/
+Help->Install software -> add the above url
+--------------------------------------------------------------------
+From Udemy website - Maven course:
+
+Download the zip file, unzip.
+System Variables - M2_HOME, without bin & slash. 
+M2_HOME = E:\softwares\apache-maven-3.3.9
+Path= xxxx path;%M2_HOME%\bin;
+path= existing path ;semicolon double percentages, inbetween variable name back slash and then bin and semicolon.
+
+now test this on command prompt by 
+
+> mvn -version
+
+
+
+
