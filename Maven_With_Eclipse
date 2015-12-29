@@ -12,3 +12,16 @@ Group ID - it is always your package name. org.bigdatatech
 Artifact ID - is project folder name, here "HelloWorld"
 Version-> we skip here
 Package -> usually we stay with the default package. org.bigdatatech, (instead of org.bigdatatech.HelloWorld)
+i.e package name is usually same as group id.
+----------------------------------------------------------
+Select the maven-archetype-quickstart: 1.1 archetype. this was giving error
+could not resolve archetype from any of the configured repositories.
+Solution is -  fixed it by adding the maven archetype catalog to eclipse.
+http://stackoverflow.com/questions/15506043/create-a-maven-project-in-eclipse-complains-could-not-resolve-archetype
+
+window->preferences->Maven->Archetypes->Add Remote Catalog
+Catalog File:http://repo1.maven.org/maven2/archetype-catalog.xml
+Description : Maven Catalog
+-------------------
+Now when i try to create a Maven project, it took a while to download all the artifacts,
+now selected "maven-archetype-quickstart"
