@@ -44,4 +44,5 @@ now test this on command prompt by
 
 In Linux servers, the variables need to be placed in .bash_profile , and source .bash_profile
 
-
+Now Configuring eclipse -> window -> preferences ->maven-.Instalations -> add external maven ->browse the mvn folder (without mvn)
+-> ok -> now comback to the installations option -> check the newly added option -> ok.
