@@ -1,0 +1,15 @@
+Date: 30Dec2015
+http://askubuntu.com/questions/20872/how-do-i-limit-internet-bandwidth
+You have 2 easy to use via terminal. Wondershaper and Trickle. There are more here: How to limit internet speed?
+
+Anyway the basics are:
+
+sudo apt-get install wondershaper
+
+In terminal find out what is the name of the interface connected to your internet by using ifconfig. Could be eth0, eth1, eth2, etc... In my case is eth1. So, I would do this:
+
+sudo wondershaper eth1 1024 256
+
+This will give me a Download speed of 1024 Kbits and 256 Kbits Upload. Which are 128KB and 16KB.
+
+If you want to reset that do this sudo wondershaper clear eth1
