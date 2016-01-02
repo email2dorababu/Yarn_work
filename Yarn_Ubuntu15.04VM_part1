@@ -6,3 +6,12 @@ Placed the Eclpse mars downloaded in the vm. this is because the files are not g
 While starting eclipse, it gave an error, JRE not found.
 so i have specified the option -VM , for this paste the output of >which Java.
 
+Now setting egit in vm's eclipse and testing whether we can update in repository?
+
+Installing Egit - since git is already available in Eclipse Mars, this step can be skipped.
+
+now we are imporing existing repository from remote(web) to local.
+Import->From Git->Projects from Git->Next->CloneURi->Fill in the details of HTTPS link and UN/PWD -> Check the box Store in Secure Store
+Next-> it will browse the URI and gets the master branch, select the branch -> Next -> It asks for the local destination
+Store it in default git repository (/home/user_name/git/) or chosse another
+I have selected /home/ubuntu/workspace/ folder for all my work.
