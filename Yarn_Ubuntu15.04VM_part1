@@ -1,0 +1,8 @@
+Date 3/Jan 2014
+started working on yarn again.
+Opened VM
+Placed the Eclpse mars downloaded in the vm. this is because the files are not getting copied from laptop to VM.
+
+While starting eclipse, it gave an error, JRE not found.
+so i have specified the option -VM , for this paste the output of >which Java.
+
