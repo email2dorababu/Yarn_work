@@ -113,8 +113,21 @@ change URL (paste the copied HTTP code)
 put user id, password -> check the store in secure store to not to type every time.
 VERY IMP --> in the same window, do not exit..
 ANother IMP is I have enabled the proxy -> then only worked, other wise error
+Another imp while updating - it gave error -> I have selected FORCE update and worked.
+Step 8: Now on remote we hae origin (red one marked) Push
+Now it is available in git hub.
 
-Step 8:
+Step 9: Now Change the file -> Check in -> It is now available in local master branch.
+Local-> master -> push changes upstream
+
+Step 10: Now for Navigator tab  (window ->show)
+Bin folder -> Team -> Ignore
+This makes class files ignore while updation.
+
+Now here local is following remote tracking
+In Remotes -> You have master branch (after remote)
+
+Step 11: commit -> comits to local -. Now Push changes it to upstream.
   
   
 
