@@ -30,6 +30,13 @@ This is now saved in to the remote location.
 --------------------------------------------------------------------------
 now start writing the examples.
 
+Create WordCount Project
+Team -> Share Project -> select the local repository
+Now Team->Commit -> enter some comments and commit, this will update the project in to local repository
+Now ->Team->Push To Upstream
+
+These all will update the files from local to remote github repository.
+
 
 
 
