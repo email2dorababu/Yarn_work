@@ -70,11 +70,53 @@ TO make it connect, right click on the project name -> Team -> Share Project ->G
 it automatically detects as git, because we have imported from git.. .git file will be there.
 
 now you can fetch.. everything will be uptodate.
---------------------------------------
-Date:31Dec2015 - Excellent video
+--------------------------------------------------------------------------------------------------------------
+Date:31Dec2015 - Excellent video - Working Steps
 https://www.youtube.com/watch?v=r5C6yXNaSGo
-
-
 Next watch https://www.youtube.com/watch?v=V42r5REJx-M
 and see all his videos - of DrBFraser
+
+Project ->Rightclick -> team -> share project
+Step1: First create local repository
+  default path is fine  it will be /users/username/git
+  Give Name with Prefix Local -> LocalSalesToolRepository
+  I am fine with the path withing repository
+  so finish -> Now the whole project is going to be in the repository. The exisiting project also moved to the local folder from workspace.
+Step2: display Extra view 
+  Window -> show views -> other -> git
+    1. here expand the tree, select 'git repositories' and 'Git Staging'
+    2. team -> history
+  See under git repositories -> Local Repositories -> this is working set.
+Step 3: Now see teh git tool bar
+how to get-> Windows -> Customize perspective -> command group availability -> check git.
+
+If you see the project, ritght click -> properties->the code is moved under the git repository.
+
+Step 4: when you change any file
+  project-.team->commit
+  put message
+  check all files yo want to commit
+  Do not check class files - only source files all text, image etc check.
+  
+Step 5: now in git repository ->local repository-> Branches -> local -> master 
+this master is the main repository, it is now created.
+
+Note : to see the history -> right click on the local repository -> show in -> history  : this is very important to track
+
+Step 6: now to Push this online?
+Now we are going to create a remote:
+
+  Create a new repository on git hub -> sales Tool
+  copy HTTP url .
+Step 7: Eclipse remote name - default is origin -> configuration PUSH -> Ok
+change URL (paste the copied HTTP code)
+put user id, password -> check the store in secure store to not to type every time.
+VERY IMP --> in the same window, do not exit..
+ANother IMP is I have enabled the proxy -> then only worked, other wise error
+
+Step 8:
+  
+  
+
+
 
