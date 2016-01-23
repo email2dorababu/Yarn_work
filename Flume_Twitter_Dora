@@ -79,3 +79,15 @@ flume-ng agent --conf conf --conf-file example.conf --name a1 -Dflume.root.logge
 Now open another terminal type
 telnet 44444
 Here now enter some text and hit enter, the message will be displayed on the flume agent.
+-----------------------------------------------------------------------
+###########################
+https://christophermeiklejohn.com/flume/hdfs/2013/06/18/flume-ng-configuration-with-an-hdfs-sink.html
+########################
+Now we do a HDFS sink
+We have some system log file in  - /var/log/system.log
+This file we will copy into hdfs/user/syslog/ folder
+https://github.com/email2dorababu/HAD-EXAMPLES/blob/master/FLUME/HDFS_Sink.conf
+
+see the above file and explanation in the folder FLUME
+
+
