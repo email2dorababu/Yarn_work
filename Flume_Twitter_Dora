@@ -2,3 +2,52 @@ Started 24 Jan 2016
 1:15AM
 https://www.youtube.com/watch?v=PdY31i25SL0
 
+go to app.twitter.com
+create new app
+
+name, description, website give something.
+
+GO to Keys and Access Tokens tab - there are four 44444444 Imp keys.
+Consumer key, Consumer Secret , Owner and Owner ID
+
+Consumer Key (API Key)	1eVOyUt0XpfCqKjLIbbgouUO9
+Consumer Secret (API Secret)	UKLnu7xI8r6PC2ADRaGfYvsQbv9UfxiyQAfk9m3JyHJYcMmUG0
+Access Level	Read and write (modify app permissions)
+Owner	ISDSedu1
+Owner ID	2231604907
+----------------------------------
+Create my access token - after you did that - Store these four.
+
+Bottom of the page you have your Access Token.
+Access Token	2231604907-fAx6Bomr4oAd1h1FH8Wu0AejwL7z5keJlDFekes
+Access Token Secret	P6YknHFY5xcFywBQ0leQ4jTVBYRE1X9ffDJ2k8lo45zXa
+Access Level	Read and write
+Owner	ISDSedu1
+Owner ID	2231604907
+
+-----------------------------------------------
+Now the four keys are created. 
+The customer key, secret and Access token and access token secret store these four.
+
+Click on OAuth Tool, the four keys will be available.
+
+Download flume and extract
+
+Go to conf folder-
+------------------------------------------------------------------------
+Here first i do a sample application that outputs the telnet inout to console.
+
+in the conf folder, I do 
+
+
+
+
+
+
+
+Go to conf folder of flume and run the below command
+flume-ng agent --conf conf --conf-file example.conf --name a1 -Dflume.root.logger=INFO,console
+
+Now open another terminal type
+telnet 44444
+Here now enter some text and hit enter, the message will be displayed on the flume agent.
