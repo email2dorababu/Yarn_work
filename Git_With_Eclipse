@@ -112,8 +112,17 @@ Step 7: Eclipse remote name - default is origin -> configuration PUSH -> Ok
 change URL (paste the copied HTTP code)
 put user id, password -> check the store in secure store to not to type every time.
 VERY IMP --> in the same window, do not exit.. Click Advanced
+
+Now REG mapping is interesing .. go to advanced 
+Source ref is the master in the Local folder, which is i am working and want to push it. Destination automatically fills master(from github).
+Add Spec, you can check the ForceUpdate, and IMP , Check box ->Save Specification in 'origin' configuration
+Save.
+
+
+
 ANother IMP is I have enabled the proxy -> then only worked, other wise error
 Another imp while updating - it gave error -> I have selected FORCE update and worked.
+
 Step 8: Now on remote we hae origin (red one marked) Push
 Now it is available in git hub.
 
