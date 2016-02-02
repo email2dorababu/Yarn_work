@@ -92,7 +92,7 @@ how to get-> Windows -> Customize perspective -> command group availability -> c
 
 If you see the project, ritght click -> properties->the code is moved under the git repository.
 
-Step 4: when you change any file
+Step 4: when you change any file , Note that first time you must click on commit, otherwise under branches/local master branch wont be created.
   project-.team->commit
   put message
   check all files yo want to commit
