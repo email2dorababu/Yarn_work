@@ -4,3 +4,5 @@ HDP_AMBARI_Installation_Ubuntu
 https://cwiki.apache.org/confluence/display/AMBARI/Install+Ambari+2.2.1+from+Public+Repositories
 
 Install Ambari 2.2.1 from Public Repositories
+ cd /etc/apt/sources.list.d
+  wget <ambari-repo-url>
