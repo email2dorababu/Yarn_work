@@ -9,3 +9,81 @@ https://cwiki.apache.org/confluence/display/AMBARI/Install+Ambari+2.2.1+from+Pub
 Install Ambari 2.2.1 from Public Repositories
  cd /etc/apt/sources.list.d
   wget <ambari-repo-url>
+
+
+
+
+    1  ifconfig
+    2  cd /etc/apt/source.list.d
+    3  cd /etc/apt/sources.list.d
+    4  ls
+    5  ls -al
+    6  wget http://public-repo-1.hortonworks.com/ambari/ubuntu14/2.x/updates/2.2.1.0/ambari.list
+    7  sudo wget http://public-repo-1.hortonworks.com/ambari/ubuntu14/2.x/updates/2.2.1.0/ambari.list
+    8  ls -al
+    9  clear
+   10  apt-key adv --recv-keys --keyserver keyserver.ubuntu.com B9733A7A07513CAD
+   11  clear
+   12  ls -al
+   13  sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com B9733A7A07513CAD
+   14  sudo apt-get update
+   15  sudo apt-get install ambari-server
+   16  ambari-server setup
+   17  sudo ambari-server setup
+   18  sudo ambari-server start
+   19  cd ~/.ssh/
+   20  cat /etc/hosts
+   21  hostname
+   22  ls /etc/sysconfig
+   23  ls ~/etc/sysconfig
+   24  cd ~
+   25  clear
+   26  history >/home/hadoop/Desktop/history
+   27  cat /etc/hostname
+   28  cat /etc/hosts
+   29  hostname -f
+   30  sudo gedit /etc/hosts
+   31  sudo service hostname restart
+   32  hostname -f
+   33  sudo service hostname restart
+   34  sudo gedit /etc/hosts
+   35  clear
+   36  sudo hostname bigdatatech.in
+   37  hostname -f
+   38  sudo ambari-server start
+   39  hostname -f
+   40  sudo hostname bigdatatech
+   41  hostname -f
+   42  sudo ambari-server stop
+   43  hostname -f
+   44  sudo ambari-server start
+   45  sudo hostname big.data.tech
+   46  hostname -f
+   47  sudo hostname bigdata
+   48  hostname
+   49  sudo ambari-server start
+   50  ipconfig
+   51  ifconfig
+   52  sudo ambari-server start
+   53  cd ~/.ssh/
+   54  sudo apt-get openssh-server openssh-client
+   55  sudo apt-get install openssh-server openssh-client
+   56  cd ~/.ssh/
+   57  ls -al
+   58  pwd
+   59  cd \
+   60  cd ~
+   61  ls -al
+   62  ls -al ~/.ssh
+   63  sudo hostname -f
+   64  sudo hostname
+   65  mkdir ~/.ssh
+   66  chmod 700 ~/.ssh
+   67  cd ~/.ssh
+   68  ssh-keygen
+   69  ls -al
+   70  cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+   71  chmod 600 ~/.ssh/authorized_keys
+   72  ssh localhost
+   73  history
+   74  history >/home/hadoop/Desktop/History_v1
