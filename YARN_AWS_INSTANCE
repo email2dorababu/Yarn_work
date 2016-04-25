@@ -30,5 +30,6 @@ Now save the session and click on load and open the connection
 With this we have completed the putty login setup
 
 ----------------------------------------------------------
-
+Now we are settingup the GUI:
+good article on username : http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/managing-users.html
 
