@@ -2,3 +2,8 @@ Date: 25Apr2015
 
 Launching Hadoop on AWS
 ----------------------
+Create an Ubuntu server.
+IMP points while creating are:
+  t2.micro is not sufficient, because of 1GB ram. (Hadoop,ubuntu occupied 750MB, and the eclipse is not getting started since it is configured to have 250MB ram in the ini file.
+Selected t2.small, with 2GB RAM and 12GB HD. (on 8GBs, only 3 GB was vacant).
+
