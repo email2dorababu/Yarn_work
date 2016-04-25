@@ -32,4 +32,17 @@ With this we have completed the putty login setup
 ----------------------------------------------------------
 Now we are settingup the GUI:
 good article on username : http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/managing-users.html
+https://alestic.com/2009/04/ubuntu-ec2-sudo-ssh-rsync/
+from the above link:
+sudo apt-get update && sudo apt-get upgrade -y
+by default there wontbe any password. To set one use the below command
+
+      sudo passwd ubuntu
+
+, for this i have chossen pwd same as username. i.e ubuntu is the password
+
+(see the link for optinal users https://alestic.com/2014/01/ec2-ssh-username/)
+
+
+
 
