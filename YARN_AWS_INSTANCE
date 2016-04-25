@@ -22,4 +22,13 @@ Public IP: 54.187.120.210
 PuttyGen - Load PEM ->Save private key-> save (ppk)
 
 open putty:  copy paste the public DNS in the Hostname
+next in the putty goto -> Connection->SSH->expand ->AUTH section -> browse the private key 
+again go to Session, give a name to session and goto connection->data,   auto login username - give ubuntu.
+
+Now save the session and click on load and open the connection
+
+With this we have completed the putty login setup
+
+----------------------------------------------------------
+
 
