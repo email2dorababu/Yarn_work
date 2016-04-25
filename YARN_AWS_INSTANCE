@@ -6,6 +6,8 @@ Create an Ubuntu server.
 IMP points while creating are:
   t2.micro is not sufficient, because of 1GB ram. (Hadoop,ubuntu occupied 750MB, and the eclipse is not getting started since it is configured to have 250MB ram in the ini file.
 Selected t2.small, with 2GB RAM and 12GB HD. (on 8GBs, only 3 GB was vacant).
+Also, while creating, Add the port 5901 for inbound traffic.
+here i added all traffic, all connections. so the separate step while creating vncserver is not required.
 
 ----------------------------
 DOWNLOAD the PEM key and store it in a secured location, and launch the instance.
@@ -42,7 +44,35 @@ by default there wontbe any password. To set one use the below command
 , for this i have chossen pwd same as username. i.e ubuntu is the password
 
 (see the link for optinal users https://alestic.com/2014/01/ec2-ssh-username/)
+----------------------------------------
+Connect to EC2 instance via putty.
 
+1. run the commands:
+sudo apt-get install ubuntu-desktop
+sudo apt-get install vnc4server
+sudo apt-get install gnome-panel
+
+2. type vncserver command once , you need to enter a password to connect via VNC. I have given ubuntu. u can use any.
+3. Remember the password that you careted to access vncserver
+Kill vncserver by ,  vncserver -kill :1
+
+4. type  vi .vnc/xstartup 
+Modify the file as below.
+first uncommit the following lines:
+
+unset SESSION_MANAGER
+
+gnome-session -session=gnome-classic &
+gnome-panel&
+
+5. type vncserver again
+6. download tightvnc from tightvnc.com
+
+7. Add port 5901 in your ec2 security group.
+
+8. Write your public IP in remote textbox(then double colon) and port number is 5901
+
+publicIp::port
 
 
 
