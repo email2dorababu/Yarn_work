@@ -7,3 +7,19 @@ IMP points while creating are:
   t2.micro is not sufficient, because of 1GB ram. (Hadoop,ubuntu occupied 750MB, and the eclipse is not getting started since it is configured to have 250MB ram in the ini file.
 Selected t2.small, with 2GB RAM and 12GB HD. (on 8GBs, only 3 GB was vacant).
 
+----------------------------
+DOWNLOAD the PEM key and store it in a secured location, and launch the instance.
+----------------------------
+Now how to access via PUTTY(CLI) and Via GUI, here GUI used is VNC client.(TightVNC)
+-----------------
+Now the instance is up and running.
+-----------------------------------------------------------------------------------------
+PUTTY: 
+Notedown public IP and DNS:
+Public DNS :ec2-54-187-120-210.us-west-2.compute.amazonaws.com
+Public IP: 54.187.120.210
+
+PuttyGen - Load PEM ->Save private key-> save (ppk)
+
+open putty:  copy paste the public DNS in the Hostname
+
