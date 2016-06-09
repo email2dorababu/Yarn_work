@@ -1,3 +1,13 @@
+
+
+Date: 9Jun2016
+https://github.com/karthikj1/Hadoop-2.7.1-Windows-64-binaries/releases/
+The above is hadoop soruce code compiled for windows. Only Hadoop is working, hive and pig is not working with windows hadoop.
+
+
+
+
+OLD ENTRIES - Not working:
 http://toodey.com/2015/08/10/hadoop-installation-on-windows-without-cygwin-in-10-mints/
 
 STEP 1::::::::::::::::::::::::::::::::::::::::::downloaded Hadoop 2.7.1 and JDK installed
