@@ -9,3 +9,36 @@ mysqld --install
 
 3.To delete the service
 sc delete mysql 
+
+4.now go to services and right click, run as administrator
+
+5.Even if you start the service it wont start, 
+so do the below command aswell.
+
+6. mysqld --initialize
+
+After this when i start the server it is successful.
+
+But when i login to the mysql -uroot -p without a password , it was displying 
+Access denied for user 'root'@'localhost' (using password: NO)
+
+For this use the below procedure.
+
+7. stop the service in services.
+8. run below command
+mysqld --skip-grant-tables
+
+9. mysql -u root mysql
+$mysql> UPDATE user SET Password=PASSWORD('my_password') where USER='root';
+$mysql> FLUSH PRIVILEGES;
+
+If you are getting an error that - unknown field Password error above use:
+
+update user set authentication_string=password('root') where user='root';   
+flush privileges;
+Here root is the password.
+
+10.now go to task manager and kill the mysql service ,
+start the service in services.
+
+You can now login to the mysql -uroot --password root
