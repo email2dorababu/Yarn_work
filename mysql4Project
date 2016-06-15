@@ -1,0 +1,11 @@
+https://www.youtube.com/watch?v=O4xXzTIcnDE
+
+Download zip file, extract and set path to bin folder.
+
+1.The below will install a service.
+mysqld --install
+
+2.now go to services and start the service, it will give error.
+
+3.To delete the service
+sc delete mysql 
