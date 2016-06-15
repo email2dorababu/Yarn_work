@@ -42,3 +42,9 @@ Here root is the password.
 start the service in services.
 
 You can now login to the mysql -uroot --password root
+even after that when you issues show database you will get below error
+You must reset your password using ALTER USER statement before executing this statement.
+
+
+for that use the below command
+SET password for 'root'@'localhost' = password('root') ;
